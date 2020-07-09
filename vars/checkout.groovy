@@ -9,6 +9,7 @@ def call(branch, url) {
     
     
     echo "$branchName"
+     echo  "hello world"
     echo "$urllink"
     checkout([
         $class: 'GitSCM',
