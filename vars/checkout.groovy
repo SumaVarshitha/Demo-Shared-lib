@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 @NonCPS
 
-def check(branch, url) {
+def call(branch, url) {
 
     
   def branchName = branch
@@ -16,7 +16,7 @@ def check(branch, url) {
       //  branches: [[name:  stageParams.branch_name ]],
       //  userRemoteConfigs: [[ url: stageParams.url_name ]]
         
-        branches: [[name: branchName ]],
-        userRemoteConfigs: [[ url: urllink ]]
+        branches: [[name: $branchName ]],
+        userRemoteConfigs: [[ url: $urllink ]]
     ])
 }
