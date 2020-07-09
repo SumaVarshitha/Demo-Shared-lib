@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 @NonCPS
 
-def call(branch, url) {
+def check(branch, url) {
 
     
   def branchName = branch
