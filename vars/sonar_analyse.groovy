@@ -16,4 +16,6 @@ def call() {
       -Dsonar.coverage.jacoco.xmlReportPaths = target/site/jacoco/*.xml \
       -Dsonar.exclusions = **/*.html,**/*.css,**/*.js,**/*.xml,src/test/java/com/example/javamavenjunithelloworld \
       -Dsonar.sourceEncoding=UTF-8"
+      }
+      }
      
