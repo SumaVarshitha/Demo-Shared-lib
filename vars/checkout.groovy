@@ -16,7 +16,7 @@ def call(branch, url) {
       //  branches: [[name:  stageParams.branch_name ]],
       //  userRemoteConfigs: [[ url: stageParams.url_name ]]
         
-        branches: [[name: "$branchName" ]],
-        userRemoteConfigs: [[ url: "$urllink" ]]
+        branches: [[name: "master" ]],
+        userRemoteConfigs: [[ url: "https://github.com/Samlee97/java-maven-junit-helloworld.git" ]]
     ])
 }
