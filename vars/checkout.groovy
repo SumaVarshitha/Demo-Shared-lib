@@ -6,7 +6,7 @@ def call(branch, url) {
     
   def branchName = branch
    def urllink = url
-    
+    echo "aaa"
     
     echo "$branchName"
      echo  "hello world"
