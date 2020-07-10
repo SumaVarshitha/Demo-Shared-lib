@@ -1,9 +1,6 @@
 #!/usr/bin/env groovy
-
 def call(branch, url) {
-
-    
-  def branchName = branch
+     def branchName = branch
    def urllink = url
    
        checkout([
@@ -13,3 +10,7 @@ def call(branch, url) {
         userRemoteConfigs: [[ url: "$urllink" ]]
     ])
 }
+
+
+    
+ 
