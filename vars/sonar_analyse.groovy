@@ -7,7 +7,7 @@ def call() {
    sh """
 ${SCANNER_HOME}/bin/sonar-scanner \
 -Dsonar.host.url=https://sonarcloud.io/ \
--Dsonar.login = 2ccda422b3b6c622bf06b58f5ffeb6402b79bdbd \
+-Dsonar.login=2ccda422b3b6c622bf06b58f5ffeb6402b79bdbd \
 -Dsonar.organization=samlee \
 -Dsonar.projectKey=samlee_sonar_analysis \
 -Dsonar.projectName=samlee_sonar_analysis \
