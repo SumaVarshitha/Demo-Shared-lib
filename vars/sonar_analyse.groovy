@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@NonCPS
+
 
 def call() {
   def SCANNER_HOME = tool 'sonar scanner'
