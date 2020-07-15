@@ -11,13 +11,19 @@ ${SCANNER_HOME}/bin/sonar-scanner \
 -Dsonar.organization=samlee \
 -Dsonar.projectKey=samlee_sonar_analysis \
 -Dsonar.projectName=samlee_sonar_analysis \
--Dsonar.projectVersion=1.0 \
--Dsonar.sources=. \
+ -Dsonar.projectVersion=1.0 \
 -Dsonar.language=java \
--Dsonar.java.binaries=. \
+-Dsonar.java.sources=. \
+-Dsonar.sources=. \
+-Dsonar.tests=src/test \
+-Dsonar.junit.reportsPath=target/surefire-reports \
+-Dsonar.surefire.reportsPath=target/surefire-reports \
+-Dsonar.jacoco.reportPath=target/jacoco.exec \
+-Dsonar.binaries=target/classes \
 -Dsonar.java.coveragePlugin=jacoco \
--Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/*.xml \
--Dsonar.sourceEncoding=UTF-8
+-Dsonar.sourceEncoding=UTF-8 \
+
+
 """ 
 }
 
