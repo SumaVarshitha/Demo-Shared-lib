@@ -14,7 +14,6 @@ ${SCANNER_HOME}/bin/sonar-scanner \
  -Dsonar.projectVersion=1.0 \
 -Dsonar.language=java \
 -Dsonar.sources=. \
--Dsonar.tests=src/test \
 -Dsonar.junit.reportsPath=target/surefire-reports \
 -Dsonar.surefire.reportsPath=target/surefire-reports \
 -Dsonar.jacoco.reportPath=target/jacoco.exec \
