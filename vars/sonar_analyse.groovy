@@ -6,8 +6,8 @@ def call(sonarorganization,sonarprojectKey,sonarprojectName) {
                 -Dsonar.host.url=https://sonarcloud.io/ \
                 -Dsonar.login = 2ccda422b3b6c622bf06b58f5ffeb6402b79bdbd \
                 -Dsonar.organization=${sonarorganization} \
-                -Dsonar.projectKey=${sonarProjectkey} \
-                -Dsonar.projectName=${sonarProjectname} \
+                -Dsonar.projectKey=${sonarprojectKey} \
+                -Dsonar.projectName=${sonarprojectName} \
                 -Dsonar.projectVersion=1.0 \
                 -Dsonar.sources=. \
                 -Dsonar.language=java \
