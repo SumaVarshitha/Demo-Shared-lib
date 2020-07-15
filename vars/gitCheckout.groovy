@@ -7,6 +7,7 @@ def call(branch, url) {
         $class: 'GitSCM',
      
         branches: [[name: "$branchName" ]],
+        extensions: [[$class: 'WipeWorkspace']],
         userRemoteConfigs: [[ url: "$urllink" ]]
     ])
 }
