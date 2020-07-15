@@ -14,7 +14,7 @@ def call(branchName,urllink,dockerimage,mavenBuild,sonarorganization,sonarprojec
                 }
                 stage('Code Checkout'){
                     steps{
-                           gitCheckout((branchName,urllink)
+                           gitCheckout(branchName,urllink)
                     }
                 }
                
