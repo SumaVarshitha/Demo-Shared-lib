@@ -17,5 +17,5 @@ def call(sonarorganization,sonarprojectKey,sonarprojectName)
                 -Dsonar.exclusions=**/*.html,**/*.css,**/*.js,src/test/java/com/javatechie/StringPalindrome/AppTest.java \
                 -Dsonar.sourceEncoding=UTF-8"
     }  
-}
+
      
