@@ -25,7 +25,7 @@ def call(branchName,urllink,dockerimage,mavenBuild,sonarorganization,sonarprojec
                 }
                 stage('SonarStage'){
                     steps{
-                       sonar_analyse(sonarorganization,sonarProjectkey,sonarProjectname)
+                       sonar_analyse(sonarorganization,sonarprojectKey,sonarprojectName)
                     }
                 }
                 stage('QualityGate'){
