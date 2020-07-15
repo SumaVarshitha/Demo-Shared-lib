@@ -1,8 +1,8 @@
 #!/usr/bin/groovy
-def call(sonarorganization,sonarProjectkey,sonarProjectname) 
+def call(sonarorganization,sonarprojectKey,sonarprojectName) 
   def SCANNER_HOME = tool 'sonar scanner'
   withSonarQubeEnv('sonar') {
-    sh "${SCANNER_HOME}/bin/sonar-scanner
+    sh "${SCANNER_HOME}/bin/sonar-scanner \
                 -Dsonar.host.url=https://sonarcloud.io/ \
                 -Dsonar.login = 2ccda422b3b6c622bf06b58f5ffeb6402b79bdbd \
                 -Dsonar.organization=${sonarorganization} \
