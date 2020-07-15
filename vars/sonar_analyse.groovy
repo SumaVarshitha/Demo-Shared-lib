@@ -1,5 +1,5 @@
 #!/usr/bin/groovy
-def call(sonarorganization,sonarprojectKey,sonarprojectName) 
+def call(sonarorganization,sonarprojectKey,sonarprojectName) {
   def SCANNER_HOME = tool 'sonar scanner'
   withSonarQubeEnv('sonar') {
     sh "${SCANNER_HOME}/bin/sonar-scanner \
@@ -17,5 +17,6 @@ def call(sonarorganization,sonarprojectKey,sonarprojectName)
                 -Dsonar.exclusions=**/*.html,**/*.css,**/*.js,src/test/java/com/javatechie/StringPalindrome/AppTest.java \
                 -Dsonar.sourceEncoding=UTF-8"
     }  
+}
 
      
