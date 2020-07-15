@@ -14,13 +14,13 @@ def call(branchName,urllink,dockerimage,mavenBuild,sonarorganization,sonarprojec
                 }
                 stage('Code Checkout'){
                     steps{
-                           checkOutFrom((branchName,urllink)
+                           gitCheckout((branchName,urllink)
                     }
                 }
                
                 stage('Build_In_Container'){
                     steps{
-                            dockerScript(dockerimage,mavenBuild)
+                            maven_build(dockerimage,mavenBuild)
                     }
                 }
                 stage('SonarStage'){
