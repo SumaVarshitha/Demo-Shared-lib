@@ -1,13 +1,12 @@
 #!/usr/bin/env groovy
-def call(branchName,urllink,dockerImage,mavenCommand,sonarorganization,sonarprojectKey,sonarprojectName){
+def call(branchName,urllink,dockerimage,mavenBuild,sonarorganization,sonarprojectKey,sonarprojectName){
         pipeline {
             agent any
+            tools {
+                   maven 'Maven_Home'
+            }
             stages {
-                stage('Invoke_Pipeline'){
-                  steps{
-                    build job:'New_Docker_Test'
-                  }
-                }
+               
                 stage('CleanUp'){
                     steps{
                          deleteDir()
@@ -15,18 +14,18 @@ def call(branchName,urllink,dockerImage,mavenCommand,sonarorganization,sonarproj
                 }
                 stage('Code Checkout'){
                     steps{
-                           checkOutFrom(scmUrl,scmCredential)
+                           checkOutFrom((branchName,urllink)
                     }
                 }
                
                 stage('Build_In_Container'){
                     steps{
-                            dockerScript(dockerImage,mavenCommand)
+                            dockerScript(dockerimage,mavenBuild)
                     }
                 }
                 stage('SonarStage'){
                     steps{
-                       sonar_analyse(sonarorganization,sonarprojectKey,sonarprojectName)
+                       sonar_analyse(sonarorganization,sonarProjectkey,sonarProjectname)
                     }
                 }
                 stage('QualityGate'){
