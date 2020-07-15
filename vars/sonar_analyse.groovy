@@ -13,7 +13,6 @@ ${SCANNER_HOME}/bin/sonar-scanner \
 -Dsonar.projectName=samlee_sonar_analysis \
  -Dsonar.projectVersion=1.0 \
 -Dsonar.language=java \
--Dsonar.java.sources=. \
 -Dsonar.sources=. \
 -Dsonar.tests=src/test \
 -Dsonar.junit.reportsPath=target/surefire-reports \
