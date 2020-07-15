@@ -1,0 +1,39 @@
+#!/usr/bin/env groovy
+def call(branchName,urllink,dockerImage,mavenCommand,sonarorganization,sonarprojectKey,sonarprojectName){
+        pipeline {
+            agent any
+            stages {
+                stage('Invoke_Pipeline'){
+                  steps{
+                    build job:'New_Docker_Test'
+                  }
+                }
+                stage('CleanUp'){
+                    steps{
+                         deleteDir()
+                    }
+                }
+                stage('Code Checkout'){
+                    steps{
+                           checkOutFrom(scmUrl,scmCredential)
+                    }
+                }
+               
+                stage('Build_In_Container'){
+                    steps{
+                            dockerScript(dockerImage,mavenCommand)
+                    }
+                }
+                stage('SonarStage'){
+                    steps{
+                       sonar_analyse(sonarorganization,sonarprojectKey,sonarprojectName)
+                    }
+                }
+                stage('QualityGate'){
+                    steps{
+                       sonar_quality_gate()
+                    }
+                }
+            }
+      }
+}
