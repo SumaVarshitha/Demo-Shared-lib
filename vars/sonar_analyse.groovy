@@ -18,6 +18,7 @@ ${SCANNER_HOME}/bin/sonar-scanner \
 -Dsonar.junit.reportsPath=target/surefire-reports \
 -Dsonar.surefire.reportsPath=target/surefire-reports \
 -Dsonar.jacoco.reportPath=target/jacoco.exec \
+-Dsonar.exclusions=**/*.html,**/*.css,**/*.js,**/*.xml,src/test/java/com/javatechie/StringPalindrome \
 -Dsonar.binaries=target/classes \
 -Dsonar.java.coveragePlugin=jacoco \
 -Dsonar.sourceEncoding=UTF-8 \
