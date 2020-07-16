@@ -14,7 +14,7 @@ def call(sonarorganization,sonarprojectKey,sonarprojectName) {
                 -Dsonar.java.binaries=. \
                 -Dsonar.java.coveragePlugin=jacoco \
                 -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/*.xml \
-                -Dsonar.exclusions=**/*.html,**/*.css,**/*.js,src/test/java/com/javatechie/StringPalindrome/AppTest.java \
+               // -Dsonar.exclusions=**/*.html,**/*.css,**/*.js,src/test/java/com/javatechie/StringPalindrome/AppTest.java \
                 -Dsonar.sourceEncoding=UTF-8"
     }  
 }
