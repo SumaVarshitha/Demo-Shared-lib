@@ -2,9 +2,7 @@
 def call(branchName,urllink,dockerimage,mavenBuild,sonarorganization,sonarprojectKey,sonarprojectName){
         pipeline {
             agent any
-            tools {
-                   maven 'Maven_Home'
-            }
+           
             stages {
                
                 stage('CleanUp'){
